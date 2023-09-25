@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #06c9e3, #e306ca);
+    font-family: Helvetica, sans-serif;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 370px;
+    height: 500px;
+    perspective: 800px;
+  }
+  
+  .container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/383299372_2087420991428207_1613677229787110942_n.png?stp=dst-png_s206x206&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeF4sSdDiNOL4S24r_H_tU8gFP34bD5BjdQU_fhsPkGN1A_aFwJtk4mlb6tH1tRdUxvXqaMqcHUCXNBKRmnF_YCS&_nc_ohc=UlzcNKh_g-wAX89mEVO&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSJ5kHFI8mM7itZddnbuWSp0WD-eRT5qVzJpQnLYPtvQA&oe=65389D9C);
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust the background size to cover the element */
+  }
+
+  
+  .back {
+    background-color: #000000;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  /* ... Your existing CSS rules ... */
+
+.back {
+  /* ... Your existing styles ... */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  text-align: center; /* Center-align text within the div */
+}
+
+
+
